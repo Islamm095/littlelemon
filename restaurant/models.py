@@ -7,7 +7,7 @@ class Menu(models.Model):
     inventory = models.DateField(default=timezone.now)
 
     def __str__(self):
-        return self.name
+        return f'{self.title} : {self.price}'
 
 
 class Booking_table(models.Model):
@@ -16,4 +16,4 @@ class Booking_table(models.Model):
     booking_date = models.DateField(default=timezone.now)
 
     def __str__(self):
-        return self.title
+        return self.name
